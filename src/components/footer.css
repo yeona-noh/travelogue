@@ -1,0 +1,7 @@
+.footerContainer p {
+    color: var(--light-orange);
+    text-align: center;
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+}

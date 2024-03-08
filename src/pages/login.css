@@ -1,0 +1,17 @@
+.login-background {
+    width: 70%;
+    min-width: 700px;
+    height: 80vh;
+    min-height: 600px;
+    background-image: url(../../public/img/map.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    border: 1px solid black;
+    margin: auto;
+    box-shadow: 10px 10px;
+}
+.login-signup-form {
+    background-color: rgba(0, 0, 0, 0.35);
+}

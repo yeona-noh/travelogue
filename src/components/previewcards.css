@@ -1,0 +1,56 @@
+.previewCard-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.slide-container {
+    width: 80%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    overflow: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+.each-card {
+    width: 200px;
+    height: 300;
+    margin: 15px;
+    padding: 5px;
+}
+.each-card img {
+    width: 200px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.card-title {
+    text-align: center;
+    padding: 10px 20px;
+    color: var(--light-orange);
+}
+.arrows {
+    width: 70px;
+    height: 70px;
+}
+.left-arrow {
+    margin: auto 5px auto 50px;
+}
+.right-arrow {
+    margin: auto 50px auto 5px;
+}
+.arrows button {
+    font-size: 50px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--light-orange);
+}
+.arrows button :hover {
+    font-size: 60px;
+}
+
