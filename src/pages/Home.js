@@ -12,7 +12,6 @@ function Home() {
         <Header />
         <Intro />
         <Main />
-        
         <Footer />
     </div>
   )

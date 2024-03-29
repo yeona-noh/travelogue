@@ -1,0 +1,43 @@
+.create-title {
+    text-align: center;
+}
+.create-container {
+    color: var(--light-orange);
+    width: 500px;
+    height: 700px;
+    margin: auto;
+}
+.createPost-form {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.create-label {
+    font-size: 25px;
+    font-weight: 100;
+    margin: 10px auto 0 0;
+}
+.travel-date {
+    width: 250px;
+    height: 25px;
+}
+.travel-place {
+    width: 250px;
+    height: 25px;
+}
+.travel-post {   
+    width: 500px;
+    height: 300px;
+}
+.create-button {
+    color: var(--light-orange);
+    width: 100px;
+    height: 30px;
+    margin: 10px 0 10px auto;
+    background-color: rgba(55, 55, 55, 0.7);
+    border: 1px solid black;
+    cursor: pointer;
+}   
+.create-button:hover {
+    background-color: rgba(151, 150, 150, 0.7);
+}

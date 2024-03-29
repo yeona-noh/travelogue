@@ -14,6 +14,7 @@
     margin: auto;
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .about-img {
@@ -26,4 +27,35 @@
 .about-content p {
     width: 400px;
     color: var(--light-orange);
+}
+.userInfo-container {
+    width: 400px;
+    height: 300px;
+}
+.user-name {
+    font-size: 25px;
+    font-weight: 700;
+}
+.write-introduction {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    color: var(--light-orange);
+}
+.introduction-box {
+    width: 400px;
+    height: 200px;
+    color: var(--light-orange);
+}
+.submit-introduction {
+    color: var(--light-orange);
+    width: 100px;
+    height: 30px;
+    margin: 10px 0 10px auto;
+    background-color: rgba(55, 55, 55, 0.7);
+    border: 1px solid black;
+    cursor: pointer;
+}
+.submit-introduction:hover {
+    background-color: rgba(151, 150, 150, 0.7);
 }
