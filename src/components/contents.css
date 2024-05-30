@@ -4,40 +4,34 @@
     margin: 0px auto;
 }
 .eachPost {
-    width: 100%;
+    width: 80%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: auto;
 }
 .titlePost {
     width: 40%;
-    height: 305px;
-    /* margin: auto auto auto 5px; */
-    padding: 0;
+    display: inline-block;
+    margin: auto;
     color: var(--light-orange);
 }
 .date {
     font-size: 30px;
     text-align: left;
-    margin-top: 5px;
-    margin-bottom: 0;
+    text-align: center;
 }
 .place {
-    width: 40%;
     height: 50px;
     font-size: 50px;
     font-weight: 900;
-    text-align: left;
-    margin-bottom: 5px;
-    margin-top: 0;
+    text-align: center;
+    margin: 5px auto;
 }
 .story {
     width: 100%;
-    height: 205px;
     margin-top: 5px;
-    text-align: left;
+    text-align: center;
     font-weight: 100;
     font-size: 25px;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }

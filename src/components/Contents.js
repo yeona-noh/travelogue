@@ -14,7 +14,7 @@ useEffect(() => {
 
     const getContent = async () => {
         try {
-            let res = await axios.get("http://localhost:5001/mypost", {
+            let res = await axios.get("http://localhost:5001/posts/mypost", {
               headers: {
                 'Authorization': `Bearer ${authToken}`
               }
@@ -33,7 +33,7 @@ useEffect(() => {
       {posts.map((post) => (
         <div className='titlePost' key={post.id}>
           <h2 className='place'>{post.place}</h2>
-          <h2 className='date'>{post.date}</h2>
+          <h2 className='date'>{post.date.split("T")[0]}</h2>
           <h3 className='story'>{post.post}</h3>
         </div>
         )

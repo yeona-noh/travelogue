@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import CreatePost from './pages/CreatePost';
+import SinglePost from './components/SinglePost';
 // import PrivateRoutes from './components/PrivateRoutes';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { userContext } from './context/userContext';
@@ -63,7 +64,7 @@ function App() {
         <Route path='/create' element={<CreatePost />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
-
+        <Route path='/SinglePost' element={<SinglePost />}/>
       </Routes> 
     </Router>
     </userNameContext.Provider>

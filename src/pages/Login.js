@@ -19,7 +19,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5001/login", {
+      const res = await axios.post("http://localhost:5001/users/login", {
         email: userEmail,
         password: userPassword,
       });
@@ -32,7 +32,7 @@ function Login() {
 
         try {
           const response = await axios.get(
-            "http://localhost:5001/login/success",
+            "http://localhost:5001/users/login/success",
             {
               headers: {
                 Authorization: `Bearer ${accessToken}`,

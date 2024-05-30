@@ -15,7 +15,7 @@ function Signup() {
     try {
       if (password === confirmPassword) {
       try {
-        const res = await axios.post("http://localhost:5001/signup", {
+        const res = await axios.post("http://localhost:5001/users/signup", {
           name: name,
           email: email,
           password: password,
