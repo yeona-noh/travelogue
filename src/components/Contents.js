@@ -19,7 +19,7 @@ useEffect(() => {
                 'Authorization': `Bearer ${authToken}`
               }
             })
-            console.log(res.data)
+            // console.log(res.data)
             setPosts(res.data)
         } catch (err) {
             console.log(err)

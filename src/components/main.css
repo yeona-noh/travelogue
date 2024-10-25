@@ -2,19 +2,34 @@
   width: 100%;
   height: 100%;
 }
-.main-greeting {
-  margin: 50px auto;
+.user-name {
+  width: 100%;
+  height: 50px;
+  margin: auto;
   text-align: center;
+  padding: 5px;
+}
+.main-greeting {
+  /* text-align: center; */
+  width: 100%;
+  font-size: 60px;
 }
 .main-preview-container {
   width: 80%;
   min-width: 800px;
   height: fit-content;
-  margin: auto;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: auto; */
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: center;
+
+}
+.contents-link {
+  text-decoration: none;
 }
 .preview-content {
   width: 300px;
@@ -47,7 +62,4 @@
  
   -webkit-box-orient: vertical;
   -webkit-line-clamp: var(--max-lines);
-}
-.user-name {
-  height: 100%;
 }

@@ -39,7 +39,11 @@ function Login() {
               },
             }
           );
-          console.log(response.data,"line42")
+          // JSON.stringify(respones.data)
+          // 리스폰스 데이타에서 {메세지: 디스이즈프로텍티드라우트, 유저: 유저네임} 이렇게 뜬다면...
+          // 해야할것 첫번째 이름을 불러와야됨
+          // 그럼 어떻게 해야하는가...response.data 에서 유저를 불러주면 되지
+          
           if (response.data) {
             setLoggedIn(true);
             setAuthToken(accessToken);
@@ -47,7 +51,6 @@ function Login() {
             setUserEmail("");
             setUserPassword("");
           }
-          console.log(response.data.user);
           navigate("/");
         } catch (error) {
           console.log(error.message);

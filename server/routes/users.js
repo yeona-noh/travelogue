@@ -13,5 +13,4 @@ router.get("/login/success",authenticateToken, usersController.getLoginSuccess);
 router.post("/signup", usersController.postSignup);
 router.post("/login", usersController.postLogin);
 
-
 module.exports = router;

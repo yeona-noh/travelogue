@@ -1,0 +1,29 @@
+.SinglePost {
+    width: 100%;
+}
+.singlepost-container {
+    width: 70%;
+    min-width: 700px;
+    height: 80vh;
+    min-height: 600px;
+    background-image: url(../../public/img/letterinbottle.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    border: 1px solid black;
+    margin: auto auto 50px auto;
+    box-shadow: 10px 10px;
+}
+.singlepost-contents {
+    width: 60%;
+    min-width: 600px;
+    background-color: rgba(0, 0, 0, 0.304);
+    margin: auto;
+    text-align: center;
+    color: var(--light-orange);
+}
+.singlepost-place {
+    font-size: 50px;
+    padding-top: 20px;
+}

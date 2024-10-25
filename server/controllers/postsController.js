@@ -7,7 +7,6 @@ exports.getPreview = async (req, res) => {
       "SELECT posts.id, date, post,place, user_id, name, about FROM posts JOIN users ON posts.user_id = users.id"
     );
     res.json(mainPreview.rows);
-    console.log(mainPreview.rows);
   } catch (error) {
     console.log(error, "mainpreview err");
   }
@@ -19,7 +18,7 @@ exports.getMypost = async (req, res) => {
       req.user.userId,
     ]);
     res.json(myPost.rows);
-    console.log(myPost.rows);
+
   } catch (error) {
     console.error(err.message);
   }
@@ -28,9 +27,14 @@ exports.getMypost = async (req, res) => {
 exports.getSinglePost = async (req, res) => {
   try {
     const postId = req.params.id;
-    const post = await pool.query("SELECT * FROM posts WHERE id = $1", [
-      postId,
-    ]);
+    const post = await pool.query(
+    //   "SELECT * FROM posts WHERE id = $1", 
+    //   [
+    //   postId,
+    // ]
+    "SELECT posts.id, date, post,place, user_id, name, about FROM posts JOIN users ON posts.id = $1",
+    [postId,]
+  );
     if (post) {
       res.status(200).json(post.rows[0]);
     } else {
@@ -45,7 +49,7 @@ exports.getSinglePost = async (req, res) => {
 exports.postNewStory = async (req, res) => {
   try {
     const { post, date, place } = req.body;
-    console.log(req.user);
+
     const newPost = await pool.query(
       "INSERT INTO posts (date, place, post, user_id) VALUES($1, $2, $3, $4) RETURNING *",
       [date, place, post, req.user.userId]
@@ -60,7 +64,7 @@ exports.postNewStory = async (req, res) => {
 exports.postWriteAbout = async (req, res) => {
   try {
     const { about } = req.body;
-    console.log(about);
+
     const newIntro = await pool.query(
       "UPDATE users SET about = $1 WHERE id = $2",
       [about, req.user.userId]

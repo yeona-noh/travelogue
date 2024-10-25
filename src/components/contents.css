@@ -7,13 +7,17 @@
     width: 80%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: flex-start;
-    margin: auto;
+    margin: 30px auto;
+    border-radius: 3px;
+    background-color: rgba(128, 128, 128, 0.414);
 }
 .titlePost {
-    width: 40%;
-    display: inline-block;
-    margin: auto;
+    width: 45%;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
     color: var(--light-orange);
 }
 .date {

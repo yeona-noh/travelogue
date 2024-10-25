@@ -7,15 +7,32 @@ exports.getAboutPage = async (req, res) => {
   try {
     const userInfo = await pool.query("SELECT name, about FROM users");
     res.json(userInfo.rows);
-    console.log(userInfo.rows);
+
   } catch (error) {
     console.log(error, "user info error");
   }
 };
+//테스트시작점, 시험삼아서 셀렉 로그인 서세스 프로세스에서 셀렉 네임만 불러오는 함수만들기
+
+// exports.getName = async (req, res) => {
+//   try {
+//     const userName = await pool.query("SELECT posts.id, date, post,place, user_id, name, about FROM posts JOIN users ON posts.id = $1",
+//     [req.params.id])
+//     res.json(userName.rows)
+//     console.log(userName.rows, "getName line 21")
+//   } catch (error) {
+//     console.log(error.messange)
+//   }
+// }
+
+
+
+
+//테스트 끝 지점
 
 exports.getLoginSuccess = async (req, res) => {
-  console.log("line19");
-  res.json({ message: "this is a protected route", user: req.user.name });
+  
+  res.json({ message: "this is a protected route", user: req.currentUserId });
 };
 
 exports.postSignup = async (req, res) => {

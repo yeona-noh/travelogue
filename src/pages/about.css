@@ -6,6 +6,7 @@
     margin: auto;
     text-align: center;
     min-width: 800px;
+    padding-bottom: 10px;
 }
 .about-content {
     width: 70%;
@@ -31,16 +32,27 @@
 .userInfo-container {
     width: 400px;
     height: 300px;
+    padding: 30px;
+    background-color: rgba(128, 128, 128, 0.327);
+    margin: 5px;
+    border-radius: 2px;
 }
 .user-name {
     font-size: 25px;
     font-weight: 700;
+    width: 400px;
+    height: 30px;
 }
 .write-introduction {
-    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     color: var(--light-orange);
+    width: 400px;
+    height: 300px;
+    padding: 30px;
+    background-color: rgba(128, 128, 128, 0.327);
+    margin: 5px;
+    border-radius: 2px;
 }
 .introduction-box {
     width: 400px;

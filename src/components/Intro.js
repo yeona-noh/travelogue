@@ -1,5 +1,4 @@
 import React from "react";
-// import SimpleSlider from "./Carousel";
 import "./intro.css";
 const Intro = () => {
 
@@ -9,8 +8,6 @@ const Intro = () => {
             Keep<br></br>the memories<br></br>
             Til next time
             </h3>
-            {/* <SimpleSlider 
-            /> */}
         </div>
     )
 }

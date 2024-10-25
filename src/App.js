@@ -21,34 +21,67 @@ function App() {
   const [userName, setUserName] = useState()
 
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const accessToken = localStorage.getItem('accessToken')
-    if (accessToken) {
-        const response = axios.get("http://localhost:5001/login/success", {
-          headers: {
-            'Authorization': `Bearer ${accessToken}`
-          }
-        }).then (response => {
-          if (response.data) {
-            setLoggedIn(true)
-            setAuthToken(accessToken)
-            setUserName(response.data.name)
+  //   const accessToken = localStorage.getItem('accessToken')
+  //   if (accessToken) {
+  //       const response = axios.get("http://localhost:5001/login/success", {
+  //         headers: {
+  //           'Authorization': `Bearer ${accessToken}`
+  //         }
+  //       }).then (response => {
+  //         if (response.data) {
+  //           setLoggedIn(true)
+  //           setAuthToken(accessToken)
+  //           setUserName(response.data.name)
+  //         }
 
-          }
-
-        }).catch (error => {
-            console.log(error.message)
-            localStorage.removeItem('accessToken')
-        }) 
+  //       }).catch (error => {
+  //           console.log(error.message)
+  //           localStorage.removeItem('accessToken')
+  //       }) 
        
 
 
 
       
 
-    }
-  }, []);
+  //   }
+  // }, []);
+
+// useEffect(() => {
+//   const fetchData = async () => {
+//     const accessToken = localStorage.getItem('accessToken');
+    
+//     if (accessToken) {
+//       try {
+//         const response = await axios.get("http://localhost:5001/login/success", {
+//           headers: {
+//             'Authorization': `Bearer ${accessToken}`
+//           }
+//         });
+
+//         // Check if response.data exists
+//         if (response.data) {
+//           console.log(response.data); // Log entire response to inspect structure
+//           console.log(response.data.name); // Log the name
+          
+//           // Update state variables
+//           setLoggedIn(true);
+//           setAuthToken(accessToken);
+//           setUserName(response.data.name);
+//         }
+
+//       } catch (error) {
+//         console.log(error.message); // Log error
+//         localStorage.removeItem('accessToken'); // Remove token if invalid
+//       }
+//     }
+//   };
+
+//   fetchData(); // Call the async function
+// }, []);
+  
 
   return (
     <userContext.Provider value={{isLoggedIn,setLoggedIn}}>
@@ -64,7 +97,7 @@ function App() {
         <Route path='/create' element={<CreatePost />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/SinglePost' element={<SinglePost />}/>
+        <Route path='/posts/:id' element={<SinglePost />}/>
       </Routes> 
     </Router>
     </userNameContext.Provider>
