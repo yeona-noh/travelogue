@@ -21,6 +21,15 @@ const corsOptions = {
   credentials: true,
   optionsSuccessStatus: 204,
 };
+const path = require("path");
+
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, "../build")));
+
+// After defining API routes, add this to handle any other routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build", "index.html"));
+});
 
 app.use(cors(corsOptions));
 app.use("/posts", postRoutes)
