@@ -9,7 +9,7 @@ const { decode } = require("punycode");
 const postRoutes = require("./routes/posts");
 const userRoutes = require("./routes/users");
 const authenticateToken = require("./middlewares/authenticateToken")
-// const path = require("path")
+const path = require("path")
 
 
 app.use(express.json());
@@ -22,23 +22,15 @@ const corsOptions = {
   credentials: true,
   optionsSuccessStatus: 204,
 };
-const path = require("path");
+
 
 // Serve static files from the React frontend app
-// app.use(express.static(path.join(__dirname, "../build")));
+app.use(express.static(path.join(__dirname, "../build")));
 
-// // After defining API routes, add this to handle any other routes
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "../build", "index.html"));
-// });
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../build")));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../build", "index.html"));
-  });
-}
+// After defining API routes, add this to handle any other routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build", "index.html"));
+});
 
 app.use(cors(corsOptions));
 app.use("/posts", postRoutes)
