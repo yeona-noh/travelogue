@@ -9,7 +9,7 @@ const { decode } = require("punycode");
 const postRoutes = require("./routes/posts");
 const userRoutes = require("./routes/users");
 const authenticateToken = require("./middlewares/authenticateToken")
-const path = require("path")
+// const path = require("path")
 
 
 app.use(express.json());
