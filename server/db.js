@@ -22,7 +22,7 @@ const { Pool } = require("pg");
 
 // Use DATABASE_URL on Heroku, otherwise fall back to local connection
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || `postgresql://${process.env.USER2}:${process.env.PASSWORD}@localhost:${process.env.DB_PORT}/${process.env.DATABASE}`,
+  connectionString: process.env.DATABASE_URL || `postgresql://${process.env.USER2}:${process.env.PASSWORD}@localhost:${process.env.PORT}/${process.env.DATABASE}`,
   ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
 });
 
