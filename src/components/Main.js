@@ -19,6 +19,7 @@ function Main() {
     try {
       const res = await axios.get("http://localhost:5001/posts/mainpreview");
       setPreviewContents(res.data);
+      console.log(res.data)
     } catch (error) {
       console.log(error);
     }

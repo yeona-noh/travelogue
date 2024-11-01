@@ -10,6 +10,7 @@
     "axios": "^1.6.7",
     "bcrypt": "^5.1.1",
     "concurrently": "^9.0.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "emailjs": "^4.0.3",
     "express": "^4.21.1",
@@ -25,13 +26,12 @@
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
-"scripts": {
-  "start": "node server/index.js",
-  "build": "react-scripts build",
-  "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix server && npm run build",
-  "dev": "concurrently \"npm run start --prefix server\" \"npm run start --prefix .\""
-}
-,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
