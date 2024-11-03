@@ -27,8 +27,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "build": "cd src && npm install && npm run build",
     "start": "node server/index.js",
-    "heroku-postbuild": "npm install --prefix src && npm run build --prefix src"
+    "heroku-postbuild": "npm run build"
   },
 
   "eslintConfig": {
