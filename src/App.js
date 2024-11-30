@@ -1,5 +1,4 @@
-import React,{useEffect, useState} from 'react';
-import axios from 'axios';
+import React,{ useState} from 'react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/Blog';
@@ -8,7 +7,6 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import CreatePost from './pages/CreatePost';
 import SinglePost from './components/SinglePost';
-// import PrivateRoutes from './components/PrivateRoutes';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { userContext } from './context/userContext';
 import { authContext } from './context/authContext';

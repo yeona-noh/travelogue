@@ -14,6 +14,9 @@ const pool = new Pool({
   host: HOST,
   port: PORT,
   database: DATABASE,
+  ssl: {
+    rejectUnauthorized: false
+}
 });
 
 module.exports = pool;
