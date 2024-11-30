@@ -15,7 +15,7 @@ function CreatePost() {
     const handlePost = async(e) => {
         e.preventDefault()
         try {
-            const res = await axios.post("http://localhost:5001/posts/post",    
+            const res = await axios.post("/posts/post",    
             {
                 date: date,
                 place: place,

@@ -14,7 +14,7 @@ useEffect(() => {
 
     const getContent = async () => {
         try {
-            let res = await axios.get("http://localhost:5001/posts/mypost", {
+            let res = await axios.get("/posts/mypost", {
               headers: {
                 'Authorization': `Bearer ${authToken}`
               }

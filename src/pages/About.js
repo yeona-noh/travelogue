@@ -22,7 +22,7 @@ const About = () => {
 
   const getUserDetail = async () => {
     try {
-      let res = await axios.get("http://localhost:5001/users/about");
+      let res = await axios.get("/users/about");
       // console.log(res.data);
       setUserInfos(res.data);
     } catch (error) {
@@ -36,7 +36,7 @@ const About = () => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        "http://localhost:5001/posts/writeabout",
+        "/posts/writeabout",
         {
           about: writeInfo,
         },

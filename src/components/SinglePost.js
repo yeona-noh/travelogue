@@ -14,7 +14,7 @@ function SinglePost() {
 
   const getPost = async () => {
     try {
-      const res = await axios.get(`http://localhost:5001/posts/posts/${id}`);
+      const res = await axios.get(`/posts/posts/${id}`);
       setSinglePost(res.data);
       // console.log(res.data)
     } catch (error) {

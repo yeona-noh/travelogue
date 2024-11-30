@@ -17,7 +17,7 @@ function Main() {
 
   const getPreview = async () => {
     try {
-      const res = await axios.get("http://localhost:5001/posts/mainpreview");
+      const res = await axios.get("/posts/mainpreview");
       setPreviewContents(res.data);
       console.log(res.data)
     } catch (error) {
