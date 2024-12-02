@@ -6,6 +6,7 @@ exports.getPreview = async (req, res) => {
     const mainPreview = await pool.query(
       "SELECT posts.id, date, post,place, user_id, name, about FROM posts JOIN users ON posts.user_id = users.id"
     );
+
     res.json(mainPreview.rows);
   } catch (error) {
     console.log(error, "mainpreview err");

@@ -16,6 +16,9 @@ const corsOptions = {
   credentials: true,
   optionsSuccessStatus: 204,
 };
+app.use(cors(corsOptions));
+app.use("/posts", postRoutes)
+app.use("/users", userRoutes)
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, '../build')));
@@ -34,9 +37,6 @@ app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, "../build", "index.html"));
 // });
 
-app.use(cors(corsOptions));
-app.use("/posts", postRoutes)
-app.use("/users", userRoutes)
 
 const PORT = process.env.PORT || 5001; // Default to 5000 if not set (for local development)
 app.listen(PORT, () => {
