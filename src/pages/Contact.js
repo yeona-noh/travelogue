@@ -4,11 +4,14 @@ import Header from '../components/Header'
 import Intro from '../components/Intro'
 import Footer from '../components/Footer'
 import './contact.css'
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 const Contact = () => {
-  const SERVICE_ID = "service_egvzqsa"
-  const TEMPLATE_ID = "template_bi6crge"
-  const PUBLIC_KEY = "wAwzs-Lo3O9VAbYKS"
+  const SERVICE_ID = process.env.SERVICE_ID
+  const TEMPLATE_ID = process.env.TEMPLATE_ID
+  const PUBLIC_KEY = process.env.PUBLIC_KEY
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
