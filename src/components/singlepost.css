@@ -6,7 +6,6 @@
     min-width: 700px;
     height: fit-content;
     min-height: 600px;
-    /* background-image: url(../../public/img/letterinbottle.png); */
     background-color: #D3D3D3 ;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,12 +18,86 @@
 .singlepost-contents {
     width: 60%;
     min-width: 600px;
-    /* background-color: rgba(0, 0, 0, 0.304); */
     margin: auto auto 50px auto;
     text-align: center;
     color: #000;
 }
+.singlepost-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
 .singlepost-place {
     font-size: 50px;
     padding-top: 20px;
+    margin-bottom: 0;
+}
+.singlepost-name {
+    margin-top: 0;
+}
+.singlepost-story {
+    text-align: left;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--light-orange);
+    line-height: 1.5;
+}
+.name-comment {
+    display: flex;   
+}
+.username {
+    padding: 0 5px;
+}
+.comments {
+    padding: 0 5px;
+}
+.commneted-time {
+    padding: 0 5px;
+}
+.comment-box {
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #8E7AB5;
+    font-weight: 700;
+}
+.comment-input-box {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #8E7AB5;
+    padding: 25px 0;
+}
+.comment-input {
+    width: 400px;
+    margin-right: 10px;
+    color: #8E7AB5;
+    border-style: none;
+    border-bottom: 1px solid var(--light-orange);
+    background-color: transparent;
+    line-height: 15px; 
+
+}
+.comment-input:focus {
+    outline: none; 
+  }
+.comment-input::placeholder {
+    padding: 5px;
+    color: #8E7AB5;
+}
+
+.comment-submit {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    background-image: url('../../public/img/paperplane.png');
+    background-size: cover; 
+    cursor: pointer;
+}
+.comment-submit:hover {
+    background-image: url('../../public/img/paperplane-orange.png');
+
 }

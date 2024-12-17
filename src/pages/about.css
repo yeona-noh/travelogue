@@ -42,6 +42,10 @@
     font-weight: 700;
     width: 400px;
     height: 30px;
+    color: #8E7AB5 !important;
+}
+.user-introduction {
+    line-height: 1.5;
 }
 .write-introduction {
     display: flex;

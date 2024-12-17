@@ -4,19 +4,18 @@ import Header from '../components/Header'
 import Intro from '../components/Intro'
 import Footer from '../components/Footer'
 import './contact.css'
-import dotenv from 'dotenv';
-dotenv.config();
+
 
 
 const Contact = () => {
-  const SERVICE_ID = process.env.SERVICE_ID
-  const TEMPLATE_ID = process.env.TEMPLATE_ID
-  const PUBLIC_KEY = process.env.PUBLIC_KEY
+  const SERVICE_ID = process.env.REACT_APP_SERVICE_ID
+  const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID
+  const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  
+  const [notification, setNotification] = useState({message:"", type:""})
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -32,14 +31,21 @@ const Contact = () => {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateparams, PUBLIC_KEY).then(
       function (response) {
         console.log("SUCCESS!", response.status, response.text);
+        setNotification({message:"Message sendt successfully!", type:"success"})
       },
       function (error) {
         console.log("FAILED...", error);
+        setNotification({message: "Failed to send message. please try again.", type:"error"})
       }
     );
     setName("");
     setEmail("");
     setMessage("");
+
+    setTimeout(() => {
+      setNotification("")
+    },10000)
+    
   };
   
 
@@ -69,7 +75,11 @@ const Contact = () => {
             />
             <input className='button' type="submit" value="Send" />
           </form>
-
+                {notification.message && (
+                  <div className={`notification ${notification.type}`}>
+                    {notification.message}
+                  </div>
+                )}
         </div>
         <Footer />
     </div>

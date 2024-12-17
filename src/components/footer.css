@@ -1,4 +1,9 @@
+.footerContainer {
+    position: relative;
+    height: 60px;
+}
 .footerContainer p {
+    position: absolute;
     color: var(--light-orange);
     text-align: center;
     margin-top: auto;

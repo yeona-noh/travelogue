@@ -21,7 +21,7 @@ module.exports = async (req, res, next) => {
         [payload.userId]
       );
       currentUserId = getCurrentUserId.rows[0];
-      // console.log(currentUserId);
+      // console.log("get currentUserId:",currentUserId);
       if (!user) {
         return res.status(403).send("User not found");
       }

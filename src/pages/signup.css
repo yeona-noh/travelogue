@@ -66,3 +66,8 @@
 .login-signup-form .submit:hover {
     background-color: rgba(151, 150, 150, 0.7);
 }
+.link-signup {
+    font-weight: 900;
+    color: #8E7AB5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

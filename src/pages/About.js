@@ -23,8 +23,6 @@ const About = () => {
   const getUserDetail = async () => {
     try {
       let res = await axios.get("/users/about");
-      console.log(res.data);
-      console.log(typeof res.data)
       setUserInfos(res.data);
     } catch (error) {
       console.log(error.message);
@@ -63,22 +61,22 @@ const About = () => {
         <div className="about-content">
 
    
-          {/* {userInfos.filter((userInfo) => 
+          {userInfos.filter((userInfo) => 
             userInfo.about !== null).map((userInfo) =>
             <div className="userInfo-container">
               <p className="user-name">{userInfo.name}</p>
               <p className="user-introduction">{userInfo.about}</p>
             </div>
-          )} */}
+          )}
 
-
+{/* 
             {userInfos.map((userInfo) =>
             <div className="userInfo-container">
               <p className="user-name">{userInfo.name}</p>
               <p className="user-introduction">{userInfo.about}</p>
             </div>
           )}
-  
+   */}
 
           {isLoggedIn ? (
             <div className="write-introduction">

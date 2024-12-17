@@ -20,25 +20,16 @@ app.use(cors(corsOptions));
 app.use("/posts", postRoutes)
 app.use("/users", userRoutes)
 
-// Serve static files from the React app
 app.use(express.static(path.join(__dirname, '../build')));
 
-// Catch-all route to serve the React frontend
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../build', 'index.html'));
 });
 
 
-// Serve static files from the React frontend app
-// app.use(express.static(path.join(__dirname, "../build")));
 
-// // After defining API routes, add this to handle any other routes
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "../build", "index.html"));
-// });
-
-
-const PORT = process.env.PORT || 5001; // Default to 5000 if not set (for local development)
+const PORT = process.env.PORT || 5001; 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

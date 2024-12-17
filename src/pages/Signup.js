@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import axios from "axios";
 import "./signup.css";
 import Header from "../components/Header";
-
+import Footer from "../components/Footer";
 function Signup() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -85,12 +85,13 @@ function Signup() {
           ></input>
           <p className="link">
             Already have an account?{" "}
-            <Link className="link" to="/login">
+            <Link className="link link-login" to="/login">
               Log in
             </Link>
           </p>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }

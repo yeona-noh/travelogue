@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import { userContext } from "../context/userContext";
 import "./header.css";
 
@@ -20,31 +20,26 @@ const Header = () => {
       <div className="loginSignup">
         <ul className="nav">
           <li>
-            <Link className="link" to="/">
+            <NavLink className="link" activeClassName="active" to="/">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="link" to="/about">
+            <NavLink className="link" activeClassName="active" to="/about">
               About
-            </Link>
+            </NavLink>
           </li>
           {isLoggedIn ? (
             <div className="nav">
               <li>
-                <Link className="link" to="/blog">
+                <NavLink className="link" activeClassName="active" to="/blog">
                   Blog
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link className="link" to="/contact">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link className="link" to="/create">
+                <NavLink className="link" activeClassName="active" to="/create">
                   Write
-                </Link>
+                </NavLink>
               </li>
               <li>
                 <button className="link logout-btn" onClick={handleLogout}>Log out</button>
@@ -53,14 +48,14 @@ const Header = () => {
           ) : (
             <div className="nav">
               <li>
-                <Link className="link" to="/login">
+                <NavLink className="link" activeClassName="active" to="/login">
                   Login
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link className="link" to="/signup">
+                <NavLink className="link" activeClassName="active" to="/signup">
                   Sign up
-                </Link>
+                </NavLink>
               </li>
             </div>
           )}

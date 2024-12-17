@@ -14,4 +14,13 @@
 }
 .login-signup-form {
     background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(1.5px);
+}
+.login-signup-form input:focus {
+    outline: none; 
+}
+.link-login {
+    font-weight: 900;
+    color: #8E7AB5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

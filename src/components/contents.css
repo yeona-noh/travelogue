@@ -2,40 +2,65 @@
     width: 100%;
     height: 100%;
     margin: 0px auto;
+    display: flex;
+    flex-direction: column;
 }
 .eachPost {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    margin: 30px auto;
     border-radius: 3px;
     background-color: rgba(128, 128, 128, 0.414);
 }
 .titlePost {
-    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
     margin: 10px;
     padding: 20px;
     box-sizing: border-box;
     color: var(--light-orange);
 }
-.date {
-    font-size: 30px;
-    text-align: left;
-    text-align: center;
+.place-date-photo-box {
+    width: 50%;
+    margin-top: 10px;
+    height: fit-content;
+    border-right: 1px solid #8E7AB5;
+    color: #8E7AB5;
 }
 .place {
     height: 50px;
     font-size: 50px;
     font-weight: 900;
-    text-align: center;
+    text-align: right;
     margin: 5px auto;
+    padding-right: 10px;
+}
+.date {
+    font-size: 30px;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.blog-photo {
+    width: 200px;
+    height: 200px;
+    padding-top: 5px;
+    padding-right: 10px;
+    margin-top: 0;
+    float: right;
 }
 .story {
-    width: 100%;
+    width: 50%;
     margin-top: 5px;
-    text-align: center;
+    text-align: left;
+    padding-left: 10px;
     font-weight: 100;
-    font-size: 25px;
+    font-size: 20px;
+    line-height: 1.3;
 }

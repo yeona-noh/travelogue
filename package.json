@@ -12,7 +12,6 @@
     "bcrypt": "^5.1.1",
     "concurrently": "^9.0.1",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
     "emailjs": "^4.0.3",
     "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
@@ -24,17 +23,16 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "react-slideshow-image": "^4.3.0",
+    "react-toastify": "^10.0.6",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
-"scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build", 
-  "test": "react-scripts test",
-  "eject": "react-scripts eject"
-},
-
-
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

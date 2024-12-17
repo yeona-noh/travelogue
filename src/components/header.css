@@ -38,6 +38,9 @@ h1 {
     text-decoration: none;
     margin-right: 5px;
 }
+.link.active {
+    color: #8E7AB5;
+}
 .logout-btn {
     background-color: transparent;
     border: none;

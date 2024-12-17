@@ -6,6 +6,7 @@ import { authContext } from "../context/authContext";
 import { userNameContext } from "../context/userNameContext";
 import "./login.css";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Login() {
   const { setLoggedIn } = useContext(userContext);
@@ -94,13 +95,13 @@ function Login() {
           ></input>
           <p className="link">
             Need an account?{" "}
-            <Link className="link" to="/signup">
-              {" "}
+            <Link className="link link-signup" to="/signup">
               Sign up
             </Link>
           </p>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }
