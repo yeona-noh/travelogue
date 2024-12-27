@@ -4,6 +4,8 @@ const cors = require("cors");
 const postsController = require("../controllers/postsController");
 const authenticateToken = require("../middlewares/authenticateToken");
 const upload = require('../middlewares/uploadMiddleware')
+const dotenv = require('dotenv');
+dotenv.config();
 router.use(express.json());
 router.use(cors());
 

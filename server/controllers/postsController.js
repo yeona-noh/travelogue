@@ -1,5 +1,7 @@
 const axios = require("axios");
 const pool = require("../db");
+const dotenv = require('dotenv');
+dotenv.config();
 const { uploadFile } = require("../services/s3Service");
 //join posts and user tables to send the name and contents together
 exports.getPreview = async (req, res) => {
